@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Pila y Cola</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -62,17 +63,6 @@
         function eliminarCola() {
             dequeue();
             mostrarCola();
-        }
-
-        function mostrarCola() {
-            const lista = document.getElementById("colaLista");
-            lista.innerHTML = "";
-
-            cola.forEach(e => {
-                const li = document.createElement("li");
-                li.textContent = e;
-                lista.appendChild(li);
-            });
         }
     </script>
 
