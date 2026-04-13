@@ -8,12 +8,57 @@
 
     <h1>Simulador de Pila y Cola</h1>
 
+    <input type="text" id="dato" placeholder="Ingrese un valor">
+
+    <h2>Pila</h2>
+    <button onclick="agregarPila()">Push</button>
+    <button onclick="eliminarPila()">Pop</button>
+    <ul id="pilaLista"></ul>
+
+    <h2>Cola</h2>
+    <button onclick="agregarCola()">Enqueue</button>
+    <button onclick="eliminarCola()">Dequeue</button>
+    <ul id="colaLista"></ul>
+
+    <script src="pila.js"></script>
+<script src="cola.js"></script>
+
+<script>
+    const pila = new Pila();
+
+    function agregarPila() {
+        const valor = document.getElementById("dato").value;
+        pila.push(valor);
+        mostrarPila();
+    }
+
+    function eliminarPila() {
+        pila.pop();
+        mostrarPila();
+    }
+
+    function mostrarPila() {
+        const lista = document.getElementById("pilaLista");
+        lista.innerHTML = "";
+
+        pila.obtenerElementos().forEach(e => {
+            const li = document.createElement("li");
+            li.textContent = e;
+            lista.appendChild(li);
+        });
+    }
+
+    function agregarCola() {
+        const valor = document.getElementById("dato").value;
+        enqueue(valor);
+        mostrarCola();
+    }
+
+    function eliminarCola() {
+        dequeue();
+        mostrarCola();
+    }
+</script>
+
 </body>
 </html>
-
-<input type="text" id="dato" placeholder="Ingrese un valor">
-
-h2>Pila</h2>
-<button onclick="agregarPila()">Push</button>
-<button onclick="eliminarPila()">Pop</button>
-<ul id="pilaLista"></ul>
