@@ -1,12 +1,12 @@
 let cola = [];
 
-// Insertar elemento (enqueue)
+// Insertar (enqueue)
 function enqueue(elemento) {
     cola.push(elemento);
     mostrarCola();
 }
 
-// Eliminar elemento (dequeue)
+// Eliminar (dequeue)
 function dequeue() {
     if (cola.length === 0) {
         alert("La cola está vacía");
@@ -16,14 +16,16 @@ function dequeue() {
     mostrarCola();
 }
 
-// Mostrar la cola en pantalla
+// Mostrar en pantalla
 function mostrarCola() {
     const lista = document.getElementById("colaLista");
+    if (!lista) return;
+
     lista.innerHTML = "";
 
-    cola.forEach(item => {
+    cola.forEach(e => {
         const li = document.createElement("li");
-        li.textContent = item;
+        li.textContent = e;
         lista.appendChild(li);
     });
 }
