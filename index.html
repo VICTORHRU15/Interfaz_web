@@ -10,55 +10,71 @@
 
     <input type="text" id="dato" placeholder="Ingrese un valor">
 
+    <!-- 🔹 PILA -->
     <h2>Pila</h2>
     <button onclick="agregarPila()">Push</button>
     <button onclick="eliminarPila()">Pop</button>
     <ul id="pilaLista"></ul>
 
+    <!-- 🔹 COLA -->
     <h2>Cola</h2>
     <button onclick="agregarCola()">Enqueue</button>
     <button onclick="eliminarCola()">Dequeue</button>
     <ul id="colaLista"></ul>
 
+    <!-- 🔹 Scripts -->
     <script src="pila.js"></script>
-<script src="cola.js"></script>
+    <script src="cola.js"></script>
 
-<script>
-    const pila = new Pila();
+    <script>
+        // 🔹 PILA
+        const pila = new Pila();
 
-    function agregarPila() {
-        const valor = document.getElementById("dato").value;
-        pila.push(valor);
-        mostrarPila();
-    }
+        function agregarPila() {
+            const valor = document.getElementById("dato").value;
+            pila.push(valor);
+            mostrarPila();
+        }
 
-    function eliminarPila() {
-        pila.pop();
-        mostrarPila();
-    }
+        function eliminarPila() {
+            pila.pop();
+            mostrarPila();
+        }
 
-    function mostrarPila() {
-        const lista = document.getElementById("pilaLista");
-        lista.innerHTML = "";
+        function mostrarPila() {
+            const lista = document.getElementById("pilaLista");
+            lista.innerHTML = "";
 
-        pila.obtenerElementos().forEach(e => {
-            const li = document.createElement("li");
-            li.textContent = e;
-            lista.appendChild(li);
-        });
-    }
+            pila.obtenerElementos().forEach(e => {
+                const li = document.createElement("li");
+                li.textContent = e;
+                lista.appendChild(li);
+            });
+        }
 
-    function agregarCola() {
-        const valor = document.getElementById("dato").value;
-        enqueue(valor);
-        mostrarCola();
-    }
+        // 🔹 COLA
+        function agregarCola() {
+            const valor = document.getElementById("dato").value;
+            enqueue(valor);
+            mostrarCola();
+        }
 
-    function eliminarCola() {
-        dequeue();
-        mostrarCola();
-    }
-</script>
+        function eliminarCola() {
+            dequeue();
+            mostrarCola();
+        }
+
+        function mostrarCola() {
+            const lista = document.getElementById("colaLista");
+            lista.innerHTML = "";
+
+            cola.forEach(e => {
+                const li = document.createElement("li");
+                li.textContent = e;
+                lista.appendChild(li);
+            });
+        }
+    </script>
 
 </body>
 </html>
