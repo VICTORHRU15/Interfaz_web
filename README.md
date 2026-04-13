@@ -1,13 +1,13 @@
-# 📌 Simulador de Pila y Cola
+# Simulador de Pila y Cola
 
-## 👥 Integrantes
+## Integrantes
 - Victor Hugo Restrepo Uribe: Interfaz (HTML y CSS)
 - Andres Felipe Popayan: Lógica de la Pila
 - Diego Betancourth: Lógica de la Cola
 
 ---
 
-## 📖 Descripción
+## Descripción
 
 Este proyecto consiste en una aplicación web que permite simular el funcionamiento de dos estructuras de datos fundamentales:
 
@@ -18,19 +18,19 @@ El usuario puede ingresar valores y realizar operaciones de inserción y elimina
 
 ---
 
-## ⚙️ Funcionalidades
+## Funcionalidades
 
-### 🔸 Pila (LIFO - Last In, First Out)
+### Pila (LIFO - Last In, First Out)
 - Insertar elementos (Push)
 - Eliminar el último elemento (Pop)
 
-### 🔸 Cola (FIFO - First In, First Out)
+### Cola (FIFO - First In, First Out)
 - Insertar elementos (Enqueue)
 - Eliminar el primer elemento (Dequeue)
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - HTML
 - CSS
@@ -40,6 +40,6 @@ El usuario puede ingresar valores y realizar operaciones de inserción y elimina
 
 ---
 
-## ▶️ Cómo ejecutar el proyecto
+##  Cómo ejecutar el proyecto
 
 1. Clonar el repositorio:
