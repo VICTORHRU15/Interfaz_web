@@ -21,4 +21,8 @@ class Pila {
   obtenerElementos() {
     return [...this.elementos];
   }
+  peek() {
+    if (this.estaVacia()) return null;
+    return this.elementos[this.elementos.length - 1];
+  }
 }
